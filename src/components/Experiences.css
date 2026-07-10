@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════
+   EXPERIENCES SECTION
+═══════════════════════════════════════ */
+.exp-section {
+  padding: 5rem 2rem;
+  background: var(--off-white);
+}
+.exp-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.exp-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.exp-header .section-sub { margin: 0.75rem auto 0; }
+
+/* ── 2 × 2 strict grid ── */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 2 columns */
+  grid-template-rows:    1fr 1fr;   /* 2 rows    */
+  gap: 1.2rem;
+}
+
+/* Each card fills its cell fully */
+.exp-card {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 300px;            /* fixed height so both rows are equal */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.exp-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Background gradient fills the card */
+.exp-bg {
+  position: absolute;
+  inset: 0;
+}
+
+/* Dark gradient overlay so text is readable */
+.exp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 24, 48, 0.80) 0%,
+    rgba(8, 24, 48, 0.18) 55%,
+    transparent 100%
+  );
+}
+
+/* Top-left pill tag */
+.exp-tag-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.24rem 0.65rem;
+  border-radius: 20px;
+}
+
+/* Text content at bottom */
+.exp-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 1.4rem;
+}
+.exp-cat {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.28rem;
+  font-weight: 600;
+}
+.exp-title {
+  font-family: var(--font-d);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+}
+.exp-desc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 300;
+  margin-top: 0.4rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.38s ease, opacity 0.38s ease;
+}
+.exp-card:hover .exp-desc {
+  max-height: 80px;
+  opacity: 1;
+}
+
+/* CTA strip below grid */
+.exp-cta-strip {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  box-shadow: var(--shadow);
+}
+.exp-cta-strip h3 {
+  font-family: var(--font-d);
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: var(--navy);
+}
+.exp-cta-strip p {
+  color: var(--text-mid);
+  font-size: 0.86rem;
+  margin-top: 0.2rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .exp-section { padding: 4rem 1.5rem; }
+  /* On mobile stack as single column */
+  .exp-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .exp-card { height: 260px; }
+  .exp-cta-strip { flex-direction: column; text-align: center; padding: 1.75rem; }
+}

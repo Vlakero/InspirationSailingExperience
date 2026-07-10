@@ -1,0 +1,43 @@
+.contact-section { padding: 5rem 2rem; background: white; }
+.contact-inner { max-width: 1200px; margin: 0 auto; }
+.contact-header { text-align: center; margin-bottom: 3.5rem; }
+.contact-body { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3.5rem; align-items: start; }
+/* Left col */
+.contact-info-title { font-family: var(--font-d); font-size: 1.3rem; font-weight: 400; color: var(--navy); margin-bottom: 1.25rem; }
+.contact-detail { display: flex; align-items: flex-start; gap: 0.85rem; padding: 0.85rem 0; border-bottom: 1px solid var(--gray-100); }
+.contact-detail:last-of-type { border-bottom: none; }
+.cd-icon-wrap { width: 36px; height: 36px; border-radius: 8px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+.cd-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); font-weight: 600; display: block; margin-bottom: 0.15rem; }
+.cd-value { font-size: 0.88rem; color: var(--text); display: block; }
+/* QR block */
+.qr-block { margin-top: 2rem; background: var(--off-white); border-radius: var(--radius); padding: 1.25rem; border: 1px solid var(--gray-200); }
+.qr-block-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; display: block; }
+.qr-codes { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.qr-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.qr-box { width: 80px; height: 80px; background: white; border-radius: 8px; border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.qr-label { font-size: 0.7rem; font-weight: 500; color: var(--text-mid); text-align: center; }
+.qr-sublabel { font-size: 0.62rem; color: var(--text-light); }
+/* Form */
+.contact-form-card { background: white; border: 1px solid var(--gray-200); border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow); }
+.form-card-title { font-family: var(--font-d); font-size: 1.5rem; font-weight: 400; color: var(--navy); margin-bottom: 1.5rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-field--full { grid-column: 1 / -1; }
+.form-field label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); }
+.form-field input,
+.form-field select,
+.form-field textarea { border: 1px solid var(--gray-200); border-radius: 8px; padding: 0.7rem 0.9rem; font-family: var(--font-b); font-size: 0.88rem; color: var(--text); background: white; outline: none; width: 100%; transition: border-color 0.25s, box-shadow 0.25s; -webkit-appearance: none; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(42,159,216,0.12); }
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(30,41,59,0.35); font-weight: 300; }
+.form-field textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+.form-submit-btn { display: flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; padding: 0.9rem; background: var(--teal); color: white; border: none; border-radius: 8px; font-family: var(--font-b); font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all 0.3s; margin-top: 0.5rem; }
+.form-submit-btn:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(42,159,216,0.35); }
+.form-footnote { text-align: center; font-size: 0.72rem; color: var(--text-light); font-style: italic; margin-top: 0.65rem; }
+/* Success */
+.form-success { text-align: center; padding: 3rem 1rem; }
+.form-success-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.form-success h3 { font-family: var(--font-d); font-size: 1.8rem; font-weight: 400; color: var(--navy); margin-bottom: 0.75rem; }
+.form-success p { color: var(--text-mid); line-height: 1.7; max-width: 340px; margin: 0 auto 1.5rem; font-size: 0.9rem; }
+
+@media (max-width: 900px) { .contact-body { grid-template-columns: 1fr; } }
+@media (max-width: 580px) { .contact-section { padding: 4rem 1.5rem; } .form-grid { grid-template-columns: 1fr; } .contact-form-card { padding: 1.5rem; } .qr-codes { grid-template-columns: 1fr 1fr; } }

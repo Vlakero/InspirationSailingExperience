@@ -1,0 +1,87 @@
+.hero {
+  padding: 8rem 2rem 5rem;
+  background: var(--white);
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 1rem;
+}
+.hero-h1 {
+  font-family: var(--font-d);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+.hero-h1 em { font-style: italic; color: var(--teal); }
+.hero-desc {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hero-visual  { position: relative; }
+.hero-card {
+  background: var(--off-white);
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-card svg { width: 92%; height: 92%; }
+.hero-badge {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 1.4rem;
+  background: var(--gold);
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+}
+.badge-num {
+  font-family: var(--font-d);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+}
+.badge-lbl {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.75;
+}
+.hero-stats  { display: flex; gap: 2rem; align-items: center; }
+.hstat       { display: flex; flex-direction: column; }
+.hstat-val   { font-family: var(--font-d); font-size: 1.8rem; font-weight: 400; color: var(--navy); line-height: 1; }
+.hstat-lbl   { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-top: 0.2rem; }
+.hstat-div   { width: 1px; height: 32px; background: var(--gray-200); }
+
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero { padding: 7rem 1.5rem 4rem; }
+}
