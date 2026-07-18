@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import About from './components/About';
 import Experiences from './components/Experiences';
 import Pricing from './components/Pricing';
@@ -22,7 +21,6 @@ export default function App() {
   return (
     <Layout>
       <Hero />
-      <Services />
       <About />
       <Experiences />
       <Pricing />
