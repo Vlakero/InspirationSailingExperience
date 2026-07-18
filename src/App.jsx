@@ -6,6 +6,10 @@ import Experiences from './components/Experiences';
 import Pricing from './components/Pricing';
 import Calendar from './components/Calendar';
 import Contact from './components/Contact';
+import Chartering from './components/Chartering';
+import Private from './components/Private';
+import Public from './components/Public';
+import Sailing from './components/Sailing';
 import './styles.css';
 
 export default function App() {
@@ -24,6 +28,10 @@ export default function App() {
       <About />
       <Experiences />
       <Pricing />
+      <Public />
+      <Private />
+      <Sailing />
+      <Chartering />
       <Calendar />
       <Contact />
     </Layout>
