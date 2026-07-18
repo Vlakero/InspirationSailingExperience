@@ -5,34 +5,34 @@ import './Experiences.css';
 const copy = {
   es: { label:'Experiencias', title:'Momentos que recordarás siempre', sub:'Cada experiencia a bordo del Inspiration es única e irrepetible.', cta:'Planea tu viaje', ctaSub:'Cada experiencia a un clic de distancia.',
     cards:[
-      { cat:'Diversión sin límites', title:'Tours & Fiestas', desc:'Navega el Caribe con amigos y familia. Música, bebidas y snorkel en los arrecifes más hermosos.', tag:'Más Popular', bg:'linear-gradient(135deg,#0a3a5c,#1a6a9a)' },
-      { cat:'Adrenalina pura', title:'Pesca Deportiva', desc:'Aguas del Caribe ricas en marlín, pez vela y dorado. Guías expertos y equipo profesional.', tag:'Emocionante', bg:'linear-gradient(135deg,#1a4a2a,#2a7a4a)' },
-      { cat:'Puesta de sol mágica', title:'Sunset & Cócteles', desc:'El espectáculo del atardecer caribeño con champagne, música y la brisa del mar.', tag:'Romántico', bg:'linear-gradient(135deg,#6a2a10,#c07020)' },
-      { cat:'Ocasiones especiales', title:'Bodas & Eventos', desc:'Tu evento más especial en alta mar. Decoración, catering gourmet y momentos para siempre.', tag:'Memorable', bg:'linear-gradient(135deg,#3a1a6a,#7a40b0)' },
+      { slug:'tours-fiestas', icon:'⛵', cat:'Diversión sin límites', title:'Tours & Fiestas', desc:'Navega el Caribe con amigos y familia. Música, bebidas y snorkel en los arrecifes más hermosos.', tag:'Más Popular' },
+      { slug:'pesca-deportiva', icon:'🎣', cat:'Adrenalina pura', title:'Pesca Deportiva', desc:'Aguas del Caribe ricas en marlín, pez vela y dorado. Guías expertos y equipo profesional.', tag:'Emocionante' },
+      { slug:'sunset-cocteles', icon:'🍹', cat:'Puesta de sol mágica', title:'Sunset & Cócteles', desc:'El espectáculo del atardecer caribeño con champagne, música y la brisa del mar.', tag:'Romántico' },
+      { slug:'bodas-eventos', icon:'💍', cat:'Ocasiones especiales', title:'Bodas & Eventos', desc:'Tu evento más especial en alta mar. Decoración, catering gourmet y momentos para siempre.', tag:'Memorable' },
     ]
   },
   en: { label:'Experiences', title:'Moments you will always remember', sub:'Every experience aboard Inspiration is unique and unforgettable.', cta:'Plan your trip', ctaSub:'Every experience is one click away.',
     cards:[
-      { cat:'Limitless fun', title:'Tours & Parties', desc:'Sail the Caribbean with friends and family. Music, drinks and snorkeling at the most beautiful reefs.', tag:'Most Popular', bg:'linear-gradient(135deg,#0a3a5c,#1a6a9a)' },
-      { cat:'Pure adrenaline', title:'Sport Fishing', desc:'Caribbean waters rich in marlin, sailfish and mahi-mahi. Expert guides and professional equipment.', tag:'Thrilling', bg:'linear-gradient(135deg,#1a4a2a,#2a7a4a)' },
-      { cat:'Magic sunset', title:'Sunset & Cocktails', desc:'The Caribbean sunset spectacle with champagne, music and sea breeze.', tag:'Romantic', bg:'linear-gradient(135deg,#6a2a10,#c07020)' },
-      { cat:'Special occasions', title:'Weddings & Events', desc:'Your most special event on the high seas. Décor, gourmet catering and memories forever.', tag:'Memorable', bg:'linear-gradient(135deg,#3a1a6a,#7a40b0)' },
+      { slug:'tours-parties', icon:'⛵', cat:'Limitless fun', title:'Tours & Parties', desc:'Sail the Caribbean with friends and family. Music, drinks and snorkeling at the most beautiful reefs.', tag:'Most Popular' },
+      { slug:'sport-fishing', icon:'🎣', cat:'Pure adrenaline', title:'Sport Fishing', desc:'Caribbean waters rich in marlin, sailfish and mahi-mahi. Expert guides and professional equipment.', tag:'Thrilling' },
+      { slug:'sunset-cocktails', icon:'🍹', cat:'Magic sunset', title:'Sunset & Cocktails', desc:'The Caribbean sunset spectacle with champagne, music and sea breeze.', tag:'Romantic' },
+      { slug:'weddings-events', icon:'💍', cat:'Special occasions', title:'Weddings & Events', desc:'Your most special event on the high seas. Décor, gourmet catering and memories forever.', tag:'Memorable' },
     ]
   },
   fr: { label:'Expériences', title:'Des moments que vous n\'oublierez jamais', sub:'Chaque expérience à bord de l\'Inspiration est unique et inoubliable.', cta:'Planifiez votre voyage', ctaSub:'Chaque expérience à portée de clic.',
     cards:[
-      { cat:'Plaisir sans limites', title:'Tours & Fêtes', desc:'Naviguez dans les Caraïbes avec amis et famille. Musique, boissons et plongée aux plus beaux récifs.', tag:'Plus populaire', bg:'linear-gradient(135deg,#0a3a5c,#1a6a9a)' },
-      { cat:'Adrénaline pure', title:'Pêche sportive', desc:'Eaux riches en marlin, voilier et mahi-mahi. Guides experts et équipement professionnel.', tag:'Palpitant', bg:'linear-gradient(135deg,#1a4a2a,#2a7a4a)' },
-      { cat:'Coucher de soleil magique', title:'Coucher de soleil & Cocktails', desc:'Le spectacle du coucher de soleil caribéen avec champagne, musique et brise marine.', tag:'Romantique', bg:'linear-gradient(135deg,#6a2a10,#c07020)' },
-      { cat:'Occasions spéciales', title:'Mariages & Événements', desc:'Votre événement le plus spécial en haute mer. Décoration, gastronomie et souvenirs pour toujours.', tag:'Mémorable', bg:'linear-gradient(135deg,#3a1a6a,#7a40b0)' },
+      { slug:'tours-fetes', icon:'⛵', cat:'Plaisir sans limites', title:'Tours & Fêtes', desc:'Naviguez dans les Caraïbes avec amis et famille. Musique, boissons et plongée aux plus beaux récifs.', tag:'Plus populaire' },
+      { slug:'peche-sportive', icon:'🎣', cat:'Adrénaline pure', title:'Pêche sportive', desc:'Eaux riches en marlin, voilier et mahi-mahi. Guides experts et équipement professionnel.', tag:'Palpitant' },
+      { slug:'coucher-de-soleil-cocktails', icon:'🍹', cat:'Coucher de soleil magique', title:'Coucher de soleil & Cocktails', desc:'Le spectacle du coucher de soleil caribéen avec champagne, musique et brise marine.', tag:'Romantique' },
+      { slug:'mariages-evenements', icon:'💍', cat:'Occasions spéciales', title:'Mariages & Événements', desc:'Votre événement le plus spécial en haute mer. Décoration, gastronomie et souvenirs pour toujours.', tag:'Mémorable' },
     ]
   },
   de: { label:'Erlebnisse', title:'Momente, die Sie nie vergessen werden', sub:'Jedes Erlebnis an Bord der Inspiration ist einzigartig und unvergesslich.', cta:'Reise planen', ctaSub:'Jedes Erlebnis ist einen Klick entfernt.',
     cards:[
-      { cat:'Grenzenloser Spaß', title:'Touren & Partys', desc:'Segeln Sie mit Freunden und Familie durch die Karibik. Musik, Getränke und Schnorcheln.', tag:'Beliebteste', bg:'linear-gradient(135deg,#0a3a5c,#1a6a9a)' },
-      { cat:'Pur Adrenalin', title:'Sportfischen', desc:'Karibische Gewässer reich an Marlin, Segelfisch und Mahi-Mahi. Experten und Profiausrüstung.', tag:'Aufregend', bg:'linear-gradient(135deg,#1a4a2a,#2a7a4a)' },
-      { cat:'Magischer Sonnenuntergang', title:'Sonnenuntergang & Cocktails', desc:'Das karibische Sonnenuntergangsspektakel mit Champagner, Musik und Meeresbrise.', tag:'Romantisch', bg:'linear-gradient(135deg,#6a2a10,#c07020)' },
-      { cat:'Besondere Anlässe', title:'Hochzeiten & Events', desc:'Ihr besonderes Event auf hoher See. Dekoration, Gourmet-Catering und unvergessliche Momente.', tag:'Unvergesslich', bg:'linear-gradient(135deg,#3a1a6a,#7a40b0)' },
+      { slug:'touren-partys', icon:'⛵', cat:'Grenzenloser Spaß', title:'Touren & Partys', desc:'Segeln Sie mit Freunden und Familie durch die Karibik. Musik, Getränke und Schnorcheln.', tag:'Beliebteste' },
+      { slug:'sportfischen', icon:'🎣', cat:'Pur Adrenalin', title:'Sportfischen', desc:'Karibische Gewässer reich an Marlin, Segelfisch und Mahi-Mahi. Experten und Profiausrüstung.', tag:'Aufregend' },
+      { slug:'sonnenuntergang-cocktails', icon:'🍹', cat:'Magischer Sonnenuntergang', title:'Sonnenuntergang & Cocktails', desc:'Das karibische Sonnenuntergangsspektakel mit Champagner, Musik und Meeresbrise.', tag:'Romantisch' },
+      { slug:'hochzeiten-events', icon:'💍', cat:'Besondere Anlässe', title:'Hochzeiten & Events', desc:'Ihr besonderes Event auf hoher See. Dekoration, Gourmet-Catering und unvergessliche Momente.', tag:'Unvergesslich' },
     ]
   },
 };
@@ -40,6 +40,14 @@ const copy = {
 export default function Experiences() {
   const { lang } = useContext(LangContext);
   const c = copy[lang] || copy.es;
+
+  // TODO: cuando existan las rutas/páginas de cada experiencia,
+  // reemplaza esta función por tu navegación real
+  // (por ejemplo, con React Router: navigate(`/experiencias/${slug}`))
+  const handleCardClick = (slug) => {
+    console.log('Navegar a experiencia:', slug);
+  };
+
   return (
     <section id="experiences" className="exp-section">
       <div className="exp-inner">
@@ -51,16 +59,21 @@ export default function Experiences() {
         </div>
         <div className="exp-grid">
           {c.cards.map((card, i) => (
-            <div key={i} className={`exp-card reveal reveal-delay-${i+1}`}>
-              <div className="exp-bg" style={{background: card.bg}} />
-              <div className="exp-overlay" />
-              <div className="exp-tag-pill">{card.tag}</div>
-              <div className="exp-content">
-                <span className="exp-cat">{card.cat}</span>
-                <div className="exp-title">{card.title}</div>
-                <div className="exp-desc">{card.desc}</div>
+            <button
+              key={card.slug}
+              type="button"
+              className={`exp-card reveal reveal-delay-${i+1}`}
+              onClick={() => handleCardClick(card.slug)}
+              aria-label={card.title}
+            >
+              <div className="exp-icon-box">
+                <span className="exp-icon">{card.icon}</span>
               </div>
-            </div>
+              <span className="exp-tag">{card.cat}</span>
+              <h3 className="exp-title">{card.title}</h3>
+              <p className="exp-desc">{card.desc}</p>
+              <span className="exp-badge">{card.tag}</span>
+            </button>
           ))}
         </div>
         <div className="exp-cta-strip reveal">

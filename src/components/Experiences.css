@@ -18,99 +18,88 @@
 /* ── 2 × 2 strict grid ── */
 .exp-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* 2 columns */
-  grid-template-rows:    1fr 1fr;   /* 2 rows    */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:    1fr 1fr;
   gap: 1.2rem;
 }
 
-/* Each card fills its cell fully */
+/* Card = mismo estilo blanco que tenía Services */
 .exp-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
   border-radius: 16px;
-  overflow: hidden;
-  height: 300px;            /* fixed height so both rows are equal */
-  position: relative;
+  padding: 2rem;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  font-family: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .exp-card:hover {
-  transform: translateY(-5px) scale(1.01);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
-
-/* Background gradient fills the card */
-.exp-bg {
-  position: absolute;
-  inset: 0;
+.exp-card:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
 }
 
-/* Dark gradient overlay so text is readable */
-.exp-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(8, 24, 48, 0.80) 0%,
-    rgba(8, 24, 48, 0.18) 55%,
-    transparent 100%
-  );
+.exp-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+.exp-icon {
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
-/* Top-left pill tag */
-.exp-tag-pill {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: #fff;
-  font-size: 0.6rem;
-  font-weight: 600;
+.exp-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 0.24rem 0.65rem;
-  border-radius: 20px;
+  color: var(--teal);
+  margin-bottom: 0.4rem;
 }
 
-/* Text content at bottom */
-.exp-content {
-  position: relative;
-  z-index: 1;
-  padding: 1.25rem 1.4rem;
-}
-.exp-cat {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.28rem;
-  font-weight: 600;
-}
 .exp-title {
   font-family: var(--font-d);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #fff;
+  color: var(--navy);
   line-height: 1.15;
+  margin: 0 0 0.6rem;
 }
+
 .exp-desc {
-  font-size: 0.82rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.70);
+  font-size: 0.85rem;
+  line-height: 1.65;
   font-weight: 300;
-  margin-top: 0.4rem;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.38s ease, opacity 0.38s ease;
+  color: var(--text-mid);
+  margin: 0 0 1rem;
+  flex-grow: 1;
 }
-.exp-card:hover .exp-desc {
-  max-height: 80px;
-  opacity: 1;
+
+.exp-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
 }
 
 /* CTA strip below grid */
@@ -141,11 +130,9 @@
 /* ── Responsive ── */
 @media (max-width: 760px) {
   .exp-section { padding: 4rem 1.5rem; }
-  /* On mobile stack as single column */
   .exp-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-  .exp-card { height: 260px; }
   .exp-cta-strip { flex-direction: column; text-align: center; padding: 1.75rem; }
 }

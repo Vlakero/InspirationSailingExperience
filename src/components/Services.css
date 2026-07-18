@@ -1,115 +1,138 @@
 .services-section {
+  padding: 5rem 2rem;
   background: var(--off-white);
-  padding: 96px 64px;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .services-header {
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  /* ───────────────────────────────────────────────
+     ALINEACIÓN DEL TÍTULO
+     Como está ahora: CENTRADO (igual que la imagen de referencia)
+     Para volverlo a la IZQUIERDA, comenta/borra las 2 líneas de abajo:
+  ─────────────────────────────────────────────── */
+  text-align: center;
+  align-items: center;
 }
 
-.section-eyebrow {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--color-blue);
-  margin-bottom: 12px;
+/* .wave-div se centra solo cuando el padre usa flex + align-items: center,
+   pero .services-header es un div normal, así que forzamos el centrado del
+   div del divisor directamente: */
+.services-header .wave-div {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section-title {
-  font-family: var(--font-serif);
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin: 0;
-  line-height: 1.15;
+/* Si vuelves a IZQUIERDA, también quita el margin-left/right: auto de arriba
+   (wave-div ya nace pegado a la izquierda por default) */
+
+.services-header .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  /* idem: quitar estas 2 líneas si vuelves a alinear a la izquierda */
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .service-card {
-  background: var(--color-card-bg);
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(18, 40, 63, 0.06);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-family: inherit;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card:focus-visible {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(18, 40, 63, 0.10);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
 }
 
 .service-icon-box {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: var(--color-blue-soft);
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: var(--teal-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.1rem;
 }
 
 .service-icon {
-  font-size: 28px;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
 .service-tag {
-  font-size: 11px;
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--color-blue);
-  margin-bottom: 6px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.4rem;
 }
 
 .service-name {
-  font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-navy);
-  margin: 0 0 10px;
+  font-family: var(--font-d);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin: 0 0 0.6rem;
 }
 
 .service-desc {
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: var(--color-text-muted);
-  margin: 0 0 16px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text-mid);
+  margin: 0 0 1rem;
   flex-grow: 1;
 }
 
 .service-badge {
   align-self: flex-start;
-  font-size: 13px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-navy);
-  background: var(--color-gold-soft);
-  padding: 6px 14px;
+  color: var(--navy);
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  padding: 0.35rem 0.9rem;
   border-radius: 999px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .services-section {
-    padding: 64px 24px;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .section-title {
-    font-size: 30px;
+    padding: 4rem 1.5rem;
   }
 }

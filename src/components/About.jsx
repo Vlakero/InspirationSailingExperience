@@ -18,7 +18,7 @@ export default function About() {
       <div className="about-inner">
   <div className="about-visual reveal">
     <div className="about-img-box">
-      <img src="/public/images/x100pre.jpg" alt="Inspiration - Catamarán" className="about-photo" />
+      <img src="/images/x100pre.jpg" alt="Inspiration - Catamarán" className="about-photo" />
     </div>
           <div className="about-badge">
             <span className="ab-num">{c.yr}</span>
