@@ -27,10 +27,9 @@ export default function App() {
       <Hero />
       <About />
       <Experiences />
-      <Pricing />
-      <Public />
       <Private />
       <Sailing />
+      <Pricing />
       <Chartering />
       <Calendar />
       <Contact />
