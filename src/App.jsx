@@ -6,9 +6,9 @@ import Experiences from './components/Experiences';
 import Pricing from './components/Pricing';
 import Calendar from './components/Calendar';
 import Contact from './components/Contact';
-import Chartering from './components/Chartering';
+import Events from './components/Events';
 import Private from './components/Private';
-import Public from './components/Public';
+import Fishing from './components/Fishing';
 import Sailing from './components/Sailing';
 import './styles.css';
 
@@ -29,9 +29,9 @@ export default function App() {
       <Experiences />
       <Private />
       <Sailing />
-      <Pricing />
-      <Chartering />
-      <Calendar />
+      <Fishing />
+      <Events />
+      <Pricing />    
       <Contact />
     </Layout>
   );

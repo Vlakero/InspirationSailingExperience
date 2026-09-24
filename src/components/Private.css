@@ -1,8 +1,8 @@
-.about-section { padding: 5rem 2rem; background: var(--white); }
-.about-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
+.private-section { padding: 5rem 2rem; background: var(--white); }
+.private-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
 
-.about-visual { position: relative; }
-.about-img-box {
+.private-visual { position: relative; }
+.private-img-box {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -14,18 +14,18 @@
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.about-img-box:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.18); }
-.about-img-box::after {
+.private-img-box:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.18); }
+.private-img-box::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0,20,40,0.35) 0%, transparent 40%);
   pointer-events: none;
 }
-.about-photo { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
-.about-img-box svg { width: 90%; height: 90%; }
+.private-photo { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.private-img-box svg { width: 90%; height: 90%; }
 
-.about-badge {
+.private-badge {
   position: absolute;
   bottom: -1rem;
   left: -1rem;
@@ -40,9 +40,9 @@
 .ab-num { font-family: var(--font-d); font-size: 2rem; font-weight: 400; color: var(--navy); display: block; line-height: 1; }
 .ab-lbl { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--navy); opacity: 0.75; }
 
-.about-content { display: flex; flex-direction: column; gap: 1.1rem; }
-.about-text { font-size: 0.92rem; line-height: 1.8; color: var(--text-mid); font-weight: 300; }
-.about-text strong { color: var(--navy); font-weight: 500; }
+.private-content { display: flex; flex-direction: column; gap: 1.1rem; }
+.private-text { font-size: 0.92rem; line-height: 1.8; color: var(--text-mid); font-weight: 300; }
+.private-text strong { color: var(--navy); font-weight: 500; }
 
 .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem; }
 .spec-item {
@@ -71,10 +71,10 @@
 .spec-value { font-family: var(--font-d); font-size: 1.05rem; font-weight: 400; color: var(--navy); display: block; margin-top: 0.15rem; }
 
 @media (max-width: 860px) {
-  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .about-badge { left: 0.5rem; }
+  .private-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .private-badge { left: 0.5rem; }
 }
 @media (max-width: 500px) {
-  .about-section { padding: 4rem 1.5rem; }
+  .private-section { padding: 4rem 1.5rem; }
   .specs-grid { grid-template-columns: 1fr; }
 }

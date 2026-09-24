@@ -7,7 +7,7 @@ const copy = {
     eyebrow: 'Bienvenido a bordo',
     h1a: 'Tu embarcación',
     h1b: 'en el paraíso',
-    desc: 'Inspiration es un catamarán de 40 pies diseñado para ofrecer la máxima comodidad y estabilidad en las aguas del Caribe mexicano. Con amplias áreas de descanso y cubierta superior panorámica.',
+    desc: 'Inspiration es un catamarán de 42 pies diseñado para ofrecer la máxima comodidad y estabilidad en las aguas del Caribe mexicano. Con amplias áreas de descanso y cubierta superior panorámica.',
     cta: 'Reservar Ahora',
     cta2: 'Ver Experiencias',
     s1: 'Pies', s2: 'Pasajeros', s3: 'Años',
@@ -16,7 +16,7 @@ const copy = {
     eyebrow: 'Welcome aboard',
     h1a: 'Your vessel',
     h1b: 'in paradise',
-    desc: 'Inspiration is a 40-foot catamaran designed to offer maximum comfort and stability in the waters of the Mexican Caribbean, with spacious rest areas and a panoramic upper deck.',
+    desc: 'Inspiration is a 42-foot catamaran designed to offer maximum comfort and stability in the waters of the Mexican Caribbean, with spacious rest areas and a panoramic upper deck.',
     cta: 'Book Now',
     cta2: 'See Experiences',
     s1: 'Feet', s2: 'Passengers', s3: 'Years',
@@ -25,7 +25,7 @@ const copy = {
     eyebrow: 'Bienvenue à bord',
     h1a: 'Votre embarcation',
     h1b: 'au paradis',
-    desc: 'Inspiration est un catamaran de 40 pieds conçu pour offrir un confort et une stabilité maximaux dans les eaux des Caraïbes mexicaines, avec de vastes espaces de détente.',
+    desc: 'Inspiration est un catamaran de 42 pieds conçu pour offrir un confort et une stabilité maximaux dans les eaux des Caraïbes mexicaines, avec de vastes espaces de détente.',
     cta: 'Réserver',
     cta2: 'Voir Expériences',
     s1: 'Pieds', s2: 'Passagers', s3: 'Ans',
@@ -34,7 +34,7 @@ const copy = {
     eyebrow: 'Willkommen an Bord',
     h1a: 'Ihr Schiff',
     h1b: 'im Paradies',
-    desc: 'Inspiration ist ein 40-Fuß-Katamaran, der maximalen Komfort in den Gewässern der mexikanischen Karibik bietet, mit großzügigen Ruhebereichen und Panoramadeck.',
+    desc: 'Inspiration ist ein 42-Fuß-Katamaran, der maximalen Komfort in den Gewässern der mexikanischen Karibik bietet, mit großzügigen Ruhebereichen und Panoramadeck.',
     cta: 'Jetzt buchen',
     cta2: 'Erlebnisse',
     s1: 'Fuß', s2: 'Passagiere', s3: 'Jahre',
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
           <div className="hero-stats">
             <div className="hstat">
-              <span className="hstat-val">40</span>
+              <span className="hstat-val">42</span>
               <span className="hstat-lbl">{c.s1}</span>
             </div>
             <div className="hstat-div" />
@@ -83,7 +83,7 @@ export default function Hero() {
     <img src="/images/imagen5.jpg" alt="Inspiration - Catamarán" className="hero-photo" />
   </div>
   <div className="hero-badge">
-    <span className="badge-num">40</span>
+    <span className="badge-num">42</span>
     <span className="badge-lbl">{c.s1}</span>
   </div>
 </div>

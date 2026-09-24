@@ -5,7 +5,7 @@ import './Pricing.css';
 const copy = {
   es: { label:'Precios', title:'Elige tu aventura', sub:'Precios fijos, sin cargos ocultos. Todo incluido.',
     plans:[
-      { dur:'4 horas', name:'Tour Compartido', tag:'Únete a un grupo y vive la experiencia Caribe', from:'Desde', amt:'89', unit:'USD / persona', items:['Duración: 4 horas','Snorkel incluido','Barra libre (cerveza, refrescos)','Música y entretenimiento','Equipo de snorkel','Botanas a bordo'], cta:'Reservar', ctaStyle:'dark', },
+      { dur:'3 Días', name:'Live Aboard', tag:'Únete a un grupo y vive la experiencia Caribe', from:'Desde', amt:'5000', unit:'pesos / noche', items:['Duración: 3 Días','Snorkel incluido','Barra libre (cerveza, refrescos)','Música y entretenimiento','Equipo de snorkel','Botanas a bordo'], cta:'Reservar', ctaStyle:'dark', },
       { dur:'4–6 horas', name:'Tour Privado', tag:'El catamarán exclusivamente para tu grupo', pop:true, from:'Desde', amt:'7,500', unit:'pesos / embarcación', items:['Duración: 4–6 horas','Itinerario personalizado','Cerveza','Fruta y Botana incluida','Snorkel y equipo','Hasta 15 pasajeros'], cta:'Reservar', ctaStyle:'white' },
       { dur:'Flexible', name:'Pesca & Eventos', tag:'Experiencias hechas a tu medida', quote:'Cotización', quoteSub:'personalizada', items:['Pesca deportiva equipada','Eventos corporativos','Bodas y celebraciones','Catering personalizado','Decoración a medida','Fotografía profesional'], cta:'Cotizar', ctaStyle:'dark' },
     ],

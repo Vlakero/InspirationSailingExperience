@@ -3,36 +3,36 @@ import { LangContext } from './Layout';
 import './Experiences.css';
 
 const copy = {
-  es: { label:'Experiencias', title:'Momentos que recordarás siempre', sub:'Cada experiencia a bordo del Inspiration es única e irrepetible.', cta:'Planea tu viaje', ctaSub:'Cada experiencia a un clic de distancia.',
+  es: { label:'Experiencias', title:'Momentos que recordarás siempre', sub:'Cada experiencia a bordo del Inspiration es única e irrepetible: elige entre aprender a navegar, explorar el mar, bucear o disfrutar de un día de snorkel, con salidas adaptadas a tus necesidades.', cta:'Planea tu viaje', ctaSub:'Cada experiencia está a un clic de distancia: nuestros tours incluyen bebidas, fruta, comida y snacks.  El precio no incluye el impuesto de muelle de $150 MXN por persona; si tienes alguna alergia, avísanos al reservar o antes de abordar.',
     cards:[
-      { slug:'tours-fiestas', icon:'⛵', cat:'Diversión sin límites', title:'Tours & Fiestas', desc:'Navega el Caribe con amigos y familia. Música, bebidas y snorkel en los arrecifes más hermosos.', tag:'Más Popular' },
-      { slug:'pesca-deportiva', icon:'🎣', cat:'Adrenalina pura', title:'Pesca Deportiva', desc:'Aguas del Caribe ricas en marlín, pez vela y dorado. Guías expertos y equipo profesional.', tag:'Emocionante' },
-      { slug:'sunset-cocteles', icon:'🍹', cat:'Puesta de sol mágica', title:'Sunset & Cócteles', desc:'El espectáculo del atardecer caribeño con champagne, música y la brisa del mar.', tag:'Romántico' },
-      { slug:'bodas-eventos', icon:'💍', cat:'Ocasiones especiales', title:'Bodas & Eventos', desc:'Tu evento más especial en alta mar. Decoración, catering gourmet y momentos para siempre.', tag:'Memorable' },
+      { slug:'private', icon:'⛵', cat:'Diversión sin límites', title:'Tour Privado', desc:'Navega el Caribe con amigos y familia. Música, bebidas y snorkel en los arrecifes más hermosos.', tag:'Más Popular' },
+      { slug:'fishing', icon:'🎣', cat:'Adrenalina pura', title:'Pesca', desc:'Vive una jornada de pesca en el Caribe. Aprende técnicas de pesca y disfruta del amanecer o atardecer junto a un capitán y marinero expertos.', tag:'Emocionante' },
+      { slug:'sailing', icon:'⚓', cat:'Aventura de varios días', title:'Live Aboard & Safari', desc:'Navega durante 3 días y 2 noches por Playa del Carmen, Puerto Morelos y Cozumel. Aprende vela o buceo y vive la experiencia de dormir a bordo.', tag:'Aventura' },
+      { slug:'events', icon:'💍', cat:'Ocasiones especiales', title:'Eventos', desc:'Rompe la rutina y disfruta nuevas experiencias con amigos. Descubre nuestros próximos eventos y actividades en redes sociales.', tag:'Memorable' },
     ]
   },
   en: { label:'Experiences', title:'Moments you will always remember', sub:'Every experience aboard Inspiration is unique and unforgettable.', cta:'Plan your trip', ctaSub:'Every experience is one click away.',
     cards:[
-      { slug:'tours-parties', icon:'⛵', cat:'Limitless fun', title:'Tours & Parties', desc:'Sail the Caribbean with friends and family. Music, drinks and snorkeling at the most beautiful reefs.', tag:'Most Popular' },
-      { slug:'sport-fishing', icon:'🎣', cat:'Pure adrenaline', title:'Sport Fishing', desc:'Caribbean waters rich in marlin, sailfish and mahi-mahi. Expert guides and professional equipment.', tag:'Thrilling' },
-      { slug:'sunset-cocktails', icon:'🍹', cat:'Magic sunset', title:'Sunset & Cocktails', desc:'The Caribbean sunset spectacle with champagne, music and sea breeze.', tag:'Romantic' },
-      { slug:'weddings-events', icon:'💍', cat:'Special occasions', title:'Weddings & Events', desc:'Your most special event on the high seas. Décor, gourmet catering and memories forever.', tag:'Memorable' },
+      { slug:'private', icon:'⛵', cat:'Limitless fun', title:'Private Tour', desc:'Sail the Caribbean with friends and family. Music, drinks and snorkeling at the most beautiful reefs.', tag:'Most Popular' },
+      { slug:'fishing', icon:'🎣', cat:'Pure adrenaline', title:'Fishing', desc:'Caribbean waters rich in marlin, sailfish and mahi-mahi. Expert guides and professional equipment.', tag:'Thrilling' },
+      { slug:'sailing', icon:'⚓', cat:'Multi-day adventure', title:'Live Aboard & Safari', desc:'Sail for 3 days and 2 nights through Playa del Carmen, Puerto Morelos and Cozumel. Learn sailing or diving and live the experience of sleeping aboard.', tag:'Adventure' },
+      { slug:'events', icon:'💍', cat:'Special occasions', title:'Events', desc:'Your most special event on the high seas. Décor, gourmet catering and memories forever.', tag:'Memorable' },
     ]
   },
   fr: { label:'Expériences', title:'Des moments que vous n\'oublierez jamais', sub:'Chaque expérience à bord de l\'Inspiration est unique et inoubliable.', cta:'Planifiez votre voyage', ctaSub:'Chaque expérience à portée de clic.',
     cards:[
-      { slug:'tours-fetes', icon:'⛵', cat:'Plaisir sans limites', title:'Tours & Fêtes', desc:'Naviguez dans les Caraïbes avec amis et famille. Musique, boissons et plongée aux plus beaux récifs.', tag:'Plus populaire' },
-      { slug:'peche-sportive', icon:'🎣', cat:'Adrénaline pure', title:'Pêche sportive', desc:'Eaux riches en marlin, voilier et mahi-mahi. Guides experts et équipement professionnel.', tag:'Palpitant' },
-      { slug:'coucher-de-soleil-cocktails', icon:'🍹', cat:'Coucher de soleil magique', title:'Coucher de soleil & Cocktails', desc:'Le spectacle du coucher de soleil caribéen avec champagne, musique et brise marine.', tag:'Romantique' },
-      { slug:'mariages-evenements', icon:'💍', cat:'Occasions spéciales', title:'Mariages & Événements', desc:'Votre événement le plus spécial en haute mer. Décoration, gastronomie et souvenirs pour toujours.', tag:'Mémorable' },
+      { slug:'private', icon:'⛵', cat:'Plaisir sans limites', title:'Tour Privé', desc:'Naviguez dans les Caraïbes avec amis et famille. Musique, boissons et plongée aux plus beaux récifs.', tag:'Plus populaire' },
+      { slug:'fishing', icon:'🎣', cat:'Adrénaline pure', title:'Pêche', desc:'Eaux riches en marlin, voilier et mahi-mahi. Guides experts et équipement professionnel.', tag:'Palpitant' },
+      { slug:'sailing', icon:'⚓', cat:'Aventure de plusieurs jours', title:'Live Aboard & Safari', desc:'Naviguez pendant 3 jours et 2 nuits à travers Playa del Carmen, Puerto Morelos et Cozumel. Apprenez la voile ou la plongée et vivez l\'expérience de dormir à bord.', tag:'Aventure' },
+      { slug:'events', icon:'💍', cat:'Occasions spéciales', title:'Événements', desc:'Votre événement le plus spécial en haute mer. Décoration, gastronomie et souvenirs pour toujours.', tag:'Mémorable' },
     ]
   },
   de: { label:'Erlebnisse', title:'Momente, die Sie nie vergessen werden', sub:'Jedes Erlebnis an Bord der Inspiration ist einzigartig und unvergesslich.', cta:'Reise planen', ctaSub:'Jedes Erlebnis ist einen Klick entfernt.',
     cards:[
-      { slug:'touren-partys', icon:'⛵', cat:'Grenzenloser Spaß', title:'Touren & Partys', desc:'Segeln Sie mit Freunden und Familie durch die Karibik. Musik, Getränke und Schnorcheln.', tag:'Beliebteste' },
-      { slug:'sportfischen', icon:'🎣', cat:'Pur Adrenalin', title:'Sportfischen', desc:'Karibische Gewässer reich an Marlin, Segelfisch und Mahi-Mahi. Experten und Profiausrüstung.', tag:'Aufregend' },
-      { slug:'sonnenuntergang-cocktails', icon:'🍹', cat:'Magischer Sonnenuntergang', title:'Sonnenuntergang & Cocktails', desc:'Das karibische Sonnenuntergangsspektakel mit Champagner, Musik und Meeresbrise.', tag:'Romantisch' },
-      { slug:'hochzeiten-events', icon:'💍', cat:'Besondere Anlässe', title:'Hochzeiten & Events', desc:'Ihr besonderes Event auf hoher See. Dekoration, Gourmet-Catering und unvergessliche Momente.', tag:'Unvergesslich' },
+      { slug:'private', icon:'⛵', cat:'Grenzenloser Spaß', title:'Private Tour', desc:'Segeln Sie mit Freunden und Familie durch die Karibik. Musik, Getränke und Schnorcheln.', tag:'Beliebteste' },
+      { slug:'fishing', icon:'🎣', cat:'Pur Adrenalin', title:'Fischen', desc:'Karibische Gewässer reich an Marlin, Segelfisch und Mahi-Mahi. Experten und Profiausrüstung.', tag:'Aufregend' },
+      { slug:'sailing', icon:'⚓', cat:'Mehrtägiges Abenteuer', title:'Live Aboard & Safari', desc:'Segeln Sie 3 Tage und 2 Nächte durch Playa del Carmen, Puerto Morelos und Cozumel. Lernen Sie Segeln oder Tauchen und erleben Sie das Übernachten an Bord.', tag:'Abenteuer' },
+      { slug:'events', icon:'💍', cat:'Besondere Anlässe', title:'Events', desc:'Ihr besonderes Event auf hoher See. Dekoration, Gourmet-Catering und unvergessliche Momente.', tag:'Unvergesslich' },
     ]
   },
 };
@@ -41,11 +41,10 @@ export default function Experiences() {
   const { lang } = useContext(LangContext);
   const c = copy[lang] || copy.es;
 
-  // TODO: cuando existan las rutas/páginas de cada experiencia,
-  // reemplaza esta función por tu navegación real
-  // (por ejemplo, con React Router: navigate(`/experiencias/${slug}`))
+  // Scrollea a la sección correspondiente (Private, Fishing, Sailing o Events)
+  // dentro de la misma página, ya que no se usa React Router.
   const handleCardClick = (slug) => {
-    console.log('Navegar a experiencia:', slug);
+    document.getElementById(slug)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (

@@ -14,27 +14,27 @@ export default function Private() {
   const c = copy[lang] || copy.es;
 
   return (
-    <section id="private" className="about-section">
-      <div className="about-inner">
-  <div className="about-visual reveal">
-    <div className="about-img-box">
-      <img src="/images/imagen.JPG" alt="Inspiration - Catamarán" className="about-photo" />
+    <section id="private" className="private-section">
+      <div className="private-inner">
+  <div className="private-visual reveal">
+    <div className="private-img-box">
+      <img src="/images/imagen.JPG" alt="Inspiration - Catamarán" className="private-photo" />
     </div>
-          <div className="about-badge">
+          <div className="private-badge">
             <span className="ab-lbl">{c.yrLbL}</span>
             <span className="ab-num">{c.yr}</span>
             <span className="ab-lbl">{c.yrLbl}</span>
           </div>
         </div>
 
-        <div className="about-content">
+        <div className="private-content">
           <div className="reveal">
             <span className="section-label">{c.label}</span>
             <h2 className="section-title">{c.title}</h2>
             <div className="wave-div" />
           </div>
-          <p className="about-text reveal reveal-delay-1">{c.p1}</p>
-          <p className="about-text reveal reveal-delay-2">{c.p2}</p>
+          <p className="private-text reveal reveal-delay-1">{c.p1}</p>
+          <p className="private-text reveal reveal-delay-2">{c.p2}</p>
           <div className="specs-grid reveal reveal-delay-3">
             {c.specs.map((s,i) => (
               <div key={i} className="spec-item">
