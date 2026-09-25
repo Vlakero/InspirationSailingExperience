@@ -18,7 +18,7 @@ export default function Private() {
       <div className="private-inner">
   <div className="private-visual reveal">
     <div className="private-img-box">
-      <img src="/images/imagen.JPG" alt="Inspiration - Catamarán" className="private-photo" />
+      <img src={`${import.meta.env.BASE_URL}images/imagen.JPG`} alt="Inspiration - Catamarán" className="private-photo" />
     </div>
           <div className="private-badge">
             <span className="ab-lbl">{c.yrLbL}</span>

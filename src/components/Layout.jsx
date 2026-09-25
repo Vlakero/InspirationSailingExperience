@@ -11,21 +11,21 @@ const LANGS = [
 
 /* ── Per-language navbar copy ──────────────────── */
 const NAV_COPY = {
-  es: { links:['Inicio','Servicios','Experiencias','Precios','Contacto'], book:'Reservar',
+  es: { links:['Inicio','Experiencias','Precios','Contacto'], book:'Reservar',
         tagline:'Catamarán de 40 pies · Playa del Carmen, Quintana Roo, México',
         copy:'© 2026 Inspiration. Todos los derechos reservados.' },
-  en: { links:['Home','Services','Experiences','Pricing','Contact'],      book:'Reserve',
+  en: { links:['Home','Experiences','Pricing','Contact'],      book:'Reserve',
         tagline:'40ft Catamaran · Playa del Carmen, Quintana Roo, Mexico',
         copy:'© 2026 Inspiration. All rights reserved.' },
-  fr: { links:['Accueil','Services','Expériences','Tarifs','Contact'],    book:'Réserver',
+  fr: { links:['Accueil','Expériences','Tarifs','Contact'],    book:'Réserver',
         tagline:'Catamaran 40 pieds · Playa del Carmen, Quintana Roo, Mexique',
         copy:'© 2026 Inspiration. Tous droits réservés.' },
-  de: { links:['Start','Leistungen','Erlebnisse','Preise','Kontakt'],     book:'Buchen',
+  de: { links:['Start','Erlebnisse','Preise','Kontakt'],     book:'Buchen',
         tagline:'40 Fuß Katamaran · Playa del Carmen, Quintana Roo, Mexiko',
         copy:'© 2026 Inspiration. Alle Rechte vorbehalten.' },
 };
 
-const HREFS = ['#hero','#services','#experiences','#pricing','#contact'];
+const HREFS = ['#hero','#experiences','#pricing','#contact'];
 
 /* ── Shared language context ───────────────────── */
 export const LangContext = React.createContext({ lang: 'es', setLang: () => {} });

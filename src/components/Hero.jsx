@@ -80,7 +80,7 @@ export default function Hero() {
         {/* Right: catamaran illustration */}
        <div className="hero-visual">
   <div className="hero-card">
-    <img src="/images/imagen5.jpg" alt="Inspiration - Catamarán" className="hero-photo" />
+    <img src={`${import.meta.env.BASE_URL}images/imagen5.jpg`} alt="Inspiration - Catamarán" className="hero-photo" />
   </div>
   <div className="hero-badge">
     <span className="badge-num">42</span>

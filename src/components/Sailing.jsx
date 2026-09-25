@@ -18,7 +18,7 @@ export default function Sailing() {
       <div className="sailing-inner">
   <div className="sailing-visual reveal">
     <div className="sailing-img-box">
-      <img src="/images/imagen3.JPG" alt="Inspiration - Catamarán" className="sailing-photo" />
+      <img src={`${import.meta.env.BASE_URL}images/imagen3.JPG`} alt="Inspiration - Catamarán" className="sailing-photo" />
     </div>
           <div className="sailing-badge">
             <span className="ab-num">{c.yr}</span>

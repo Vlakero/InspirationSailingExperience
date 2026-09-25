@@ -18,7 +18,7 @@ export default function Events() {
       <div className="events-inner">
   <div className="events-visual reveal">
     <div className="events-img-box">
-      <img src="/images/imagen2.JPG" alt="Inspiration - Catamarán" className="events-photo" />
+      <img src={`${import.meta.env.BASE_URL}images/imagen2.JPG`} alt="Inspiration - Catamarán" className="events-photo" />
     </div>
           <div className="events-badge">
             <span className="ab-num">{c.yr}</span>

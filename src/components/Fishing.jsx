@@ -18,7 +18,7 @@ export default function Fishing() {
       <div className="fishing-inner">
   <div className="fishing-visual reveal">
     <div className="fishing-img-box">
-      <img src="/images/imagen6.JPG" alt="Inspiration - Catamarán" className="about-photo" />
+      <img src={`${import.meta.env.BASE_URL}images/imagen6.JPG`} alt="Inspiration - Catamarán" className="about-photo" />
     </div>
           <div className="fishing-badge">
             <span className="ab-num">{c.yr}</span>
