@@ -67,9 +67,12 @@ export default function Layout({ children }) {
 
           {/* Brand */}
           <a href="#hero" className="navbar-brand">
-            <span className="brand-anchor">⚓</span>
-            <span className="brand-name">Inspiration</span>
-          </a>
+  <img
+    src={`${import.meta.env.BASE_URL}images/logoLetras.png`}
+    alt="Inspiration"
+    className="brand-logo"
+  />
+</a>
 
           {/* Desktop links */}
           <ul className="nav-links">
@@ -160,9 +163,12 @@ export default function Layout({ children }) {
         <div className="footer-inner">
           <div>
             <div className="footer-brand">
-              <span className="footer-anchor">⚓</span>
-              <span className="footer-brand-name">Inspiration</span>
-            </div>
+  <img
+    src={`${import.meta.env.BASE_URL}images/logoLetrasBlanco.png`}
+    alt="Inspiration"
+    className="footer-logo"
+  />
+</div>
             <p className="footer-tagline">{t.tagline}</p>
           </div>
           <p className="footer-copy">{t.copy}</p>
