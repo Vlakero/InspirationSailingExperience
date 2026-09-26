@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
             <div className="hstat-div" />
             <div className="hstat">
-              <span className="hstat-val">30</span>
+              <span className="hstat-val">15</span>
               <span className="hstat-lbl">{c.s2}</span>
             </div>
             <div className="hstat-div" />
