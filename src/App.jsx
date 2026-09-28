@@ -10,6 +10,7 @@ import Events from './components/Events';
 import Private from './components/Private';
 import Fishing from './components/Fishing';
 import Sailing from './components/Sailing';
+import Showcase from './components/Showcase';
 import './styles.css';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
 
   return (
     <Layout>
+      <Showcase />
       <Hero />
       <About />
       <Experiences />
