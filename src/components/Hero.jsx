@@ -46,7 +46,11 @@ export default function Hero() {
   const c = copy[lang] || copy.es;
 
   return (
-    <section id="hero" className="hero">
+      <section id="hero" className="hero">
+    <h1 className="hero-top-title">
+    Catamaran <em>Playa del Carmen</em>
+  </h1>
+    
       <div className="hero-inner">
         {/* Left: text */}
         <div>
