@@ -3,11 +3,11 @@ import { LangContext } from './Layout';
 import './Showcase.css';
 
 const IMAGES = [
-  'images/imagen.JPG',
-  'images/imagen2.JPG',
-  'images/imagen3.JPG',
-  'images/imagen4.jpg',
-  'images/imagen5.jpg',
+  'images/1a.png',
+  'images/1b.png',
+  'images/1c.png',
+  'images/1d.png',
+  'images/1e.png',
 ];
 
 const ROTATE_MS = 5000;

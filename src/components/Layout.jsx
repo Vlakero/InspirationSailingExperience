@@ -11,7 +11,7 @@ const LANGS = [
 
 /* ── Per-language navbar copy ──────────────────── */
 const NAV_COPY = {
-  es: { links:['Inicio','Experiencias','Precios','Contacto'], book:'Reservar',
+  es: { links:['Inicio','Experiencias','Blog','Precios','Contacto'], book:'Reservar',
         tagline:'Catamarán de 42 pies · Playa del Carmen, Quintana Roo, México',
         copy:'© 2026 Inspiration. Todos los derechos reservados.' },
   en: { links:['Home','Experiences','Pricing','Contact'],      book:'Reserve',
@@ -25,7 +25,7 @@ const NAV_COPY = {
         copy:'© 2026 Inspiration. Alle Rechte vorbehalten.' },
 };
 
-const HREFS = ['#hero','#experiences','#pricing','#contact'];
+const HREFS = ['#hero','#experiences','#blog','#pricing','#contact'];
 
 /* ── Shared language context ───────────────────── */
 export const LangContext = React.createContext({ lang: 'es', setLang: () => {} });
