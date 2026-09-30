@@ -12,6 +12,7 @@ import Fishing from './components/Fishing';
 import Sailing from './components/Sailing';
 import Showcase from './components/Showcase';
 import Blog from './components/Blog';
+import Crew from './components/Crew';
 import './styles.css';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
       <Hero />
       <About />
       <Blog />
+      <Crew />
       <Experiences />
       <Private />
       <Sailing />
