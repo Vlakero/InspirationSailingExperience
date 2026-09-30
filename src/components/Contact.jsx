@@ -26,21 +26,258 @@ const SOCIAL_ICONS = {
   ),
 };
 
+// Access Key de Web3Forms (ligada a egomancera@gmail.com para pruebas;
+// cuando pases al correo final, genera una nueva key en web3forms.com
+// con inspirationcatamaran42@gmail.com y reemplázala aquí).
+const WEB3FORMS_ACCESS_KEY = '92cf16fc-9861-46ac-89c6-5a9886872927';
+const MAX_PEOPLE = 15;
+const EXTRA_COST_THRESHOLD = 10;
+const EXTRA_COST_PER_PERSON = 1000;
+const EXTRA_COST_PER_PERSON_USD = 55;
+
 const copy = {
-  es: { label:'Contacto', title:'Reserva tu experiencia', sub:'Completa el formulario y te respondemos en menos de 24 horas.', infoTitle:'Información', details:[{icon:'📍',l:'Dirección',v:'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo'},{icon:'📞',l:'Teléfono',v:'+52 984 233 0557'},{icon:'✉️',l:'Email',v:'inspirationcatamaran42@gmail.com'}], qrTitle:'Síguenos en redes', qrItems:[{icon:'📷',label:'Instagram',sub:'@inspirationcatamaran',url:'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4'},{icon:'📱',label:'TikTok',sub:'@inspiration.catam',url:'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS'},{icon:'💬',label:'WhatsApp',sub:'+52 984 233 0557',url:'https://wa.me/529842330557'},{icon:'📘',label:'Facebook',sub:'Inspiration Catamaran',url:'https://www.facebook.com/InspirationCatamaran'}], formTitle:'Envíanos un mensaje', fields:{name:'Nombre',email:'Email',phone:'Teléfono',service:'Servicio',msg:'Mensaje'}, placeholders:{name:'Tu nombre',email:'tu@email.com',phone:'+52 984 ...',msg:'Cuéntanos sobre tu viaje ideal...'}, services:['Tour Compartido','Tour Privado','Pesca Deportiva','Evento / Boda','Otro'], submit:'Enviar Mensaje', footnote:'Sin compromiso. Te respondemos en menos de 24 horas.', successTitle:'¡Mensaje enviado!', successMsg:'Gracias, te contactaremos pronto para confirmar tu reserva.', successBtn:'Enviar otro mensaje' },
-  en: { label:'Contact', title:'Book your experience', sub:'Fill out the form and we will reply within 24 hours.', infoTitle:'Information', details:[{icon:'📍',l:'Address',v:'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo'},{icon:'📞',l:'Phone',v:'+52 984 123 4567'},{icon:'✉️',l:'Email',v:'reservas@inspirationcat.mx'}], qrTitle:'Follow us', qrItems:[{icon:'📷',label:'Instagram',sub:'@inspirationcatamaran',url:'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4'},{icon:'📱',label:'TikTok',sub:'@inspiration.catam',url:'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS'},{icon:'💬',label:'WhatsApp',sub:'+52 984 233 0557',url:'https://wa.me/529842330557'},{icon:'📘',label:'Facebook',sub:'Inspiration Catamaran',url:'https://www.facebook.com/InspirationCatamaran'}], formTitle:'Send us a message', fields:{name:'Name',email:'Email',phone:'Phone',service:'Service',msg:'Message'}, placeholders:{name:'Your name',email:'you@email.com',phone:'+52 984 ...',msg:'Tell us about your ideal trip...'}, services:['Shared Tour','Private Tour','Sport Fishing','Event / Wedding','Other'], submit:'Send Message', footnote:'No commitment. We reply within 24 hours.', successTitle:'Message sent!', successMsg:'Thank you, we will contact you soon to confirm your booking.', successBtn:'Send another message' },
-  fr: { label:'Contact', title:'Réservez votre expérience', sub:'Remplissez le formulaire et nous vous répondrons dans les 24 heures.', infoTitle:'Informations', details:[{icon:'📍',l:'Adresse',v:'BlueBay Grand Esmaeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo, Mexique'},{icon:'📞',l:'Téléphone',v:'+52 984 123 4567'},{icon:'✉️',l:'Email',v:'reservas@inspirationcat.mx'}], qrTitle:'Suivez-nous', qrItems:[{icon:'📷',label:'Instagram',sub:'@inspirationcatamaran',url:'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4'},{icon:'📱',label:'TikTok',sub:'@inspiration.catam',url:'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS'},{icon:'💬',label:'WhatsApp',sub:'+52 984 233 0557',url:'https://wa.me/529842330557'},{icon:'📘',label:'Facebook',sub:'Inspiration Catamaran',url:'https://www.facebook.com/InspirationCatamaran'}], formTitle:'Envoyez-nous un message', fields:{name:'Nom',email:'Email',phone:'Téléphone',service:'Service',msg:'Message'}, placeholders:{name:'Votre nom',email:'vous@email.com',phone:'+52 984 ...',msg:'Parlez-nous de votre voyage idéal...'}, services:['Tour Partagé','Tour Privé','Pêche Sportive','Événement / Mariage','Autre'], submit:'Envoyer le message', footnote:'Sans engagement. Nous répondons sous 24h.', successTitle:'Message envoyé !', successMsg:'Merci, nous vous contacterons bientôt pour confirmer votre réservation.', successBtn:'Envoyer un autre message' },
-  de: { label:'Kontakt', title:'Buchen Sie Ihr Erlebnis', sub:'Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden.', infoTitle:'Informationen', details:[{icon:'📍',l:'Adresse',v:'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo, Mexiko'},{icon:'📞',l:'Telefon',v:'+52 984 123 4567'},{icon:'✉️',l:'E-Mail',v:'reservas@inspirationcat.mx'}], qrTitle:'Folgen Sie uns', qrItems:[{icon:'📷',label:'Instagram',sub:'@inspirationcatamaran',url:'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4'},{icon:'📱',label:'TikTok',sub:'@inspiration.catam',url:'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS'},{icon:'💬',label:'WhatsApp',sub:'+52 984 233 0557',url:'https://wa.me/529842330557'},{icon:'📘',label:'Facebook',sub:'Inspiration Catamaran',url:'https://www.facebook.com/InspirationCatamaran'}], formTitle:'Senden Sie uns eine Nachricht', fields:{name:'Name',email:'E-Mail',phone:'Telefon',service:'Service',msg:'Nachricht'}, placeholders:{name:'Ihr Name',email:'Sie@email.com',phone:'+52 984 ...',msg:'Erzählen Sie uns von Ihrer idealen Reise...'}, services:['Gemeinschaftsreise','Privatreise','Sportfischen','Veranstaltung / Hochzeit','Andere'], submit:'Nachricht senden', footnote:'Unverbindlich. Wir antworten innerhalb von 24 Stunden.', successTitle:'Nachricht gesendet!', successMsg:'Danke, wir werden uns bald bei Ihnen melden.', successBtn:'Weitere Nachricht senden' },
+  es: {
+    label: 'Contacto', title: 'Reserva tu experiencia', sub: 'Completa el formulario y te respondemos en menos de 24 horas.',
+    infoTitle: 'Información',
+    details: [
+      { icon: '📍', l: 'Dirección', v: 'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo' },
+      { icon: '📞', l: 'Teléfono', v: '+52 984 233 0557' },
+      { icon: '✉️', l: 'Email', v: 'inspirationcatamaran42@gmail.com' },
+    ],
+    qrTitle: 'Síguenos en redes',
+    qrItems: [
+      { icon: '📷', label: 'Instagram', sub: '@inspirationcatamaran', url: 'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4' },
+      { icon: '📱', label: 'TikTok', sub: '@inspiration.catam', url: 'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS' },
+      { icon: '💬', label: 'WhatsApp', sub: '+52 984 233 0557', url: 'https://wa.me/529842330557' },
+      { icon: '📘', label: 'Facebook', sub: 'Inspiration Catamaran', url: 'https://www.facebook.com/InspirationCatamaran' },
+    ],
+    formTitle: 'Envíanos un mensaje',
+    fields: {
+      name: 'Nombre', email: 'Email', phone: 'Teléfono', service: 'Servicio', msg: 'Mensaje',
+      people: 'Número de personas',
+      allergies: '¿Tienen alergias?', allergyDetail: '¿A qué son alérgicos?',
+      swim: '¿Todos saben nadar?', nonSwimmers: '¿Cuántas personas no saben nadar?',
+      celebration: '¿Celebran algo especial?',
+    },
+    placeholders: {
+      name: 'Tu nombre', email: 'tu@email.com', phone: '+52 984 ...', msg: 'Cuéntanos sobre tu viaje ideal...',
+      allergyDetail: 'Ej. mariscos, nueces, lactosa...',
+    },
+    services: [ 'Tour Privado', 'Pesca Deportiva', 'Live Aboard & Safari', 'Evento ', 'Otro'],
+    yesNo: { yes: 'Sí', no: 'No' },
+    swimOptions: { all: 'Sí, todos saben nadar', notAll: 'No, no todos saben nadar' },
+    warnings: {
+      extraCost: `Los grupos de más de ${EXTRA_COST_THRESHOLD} personas tienen un costo adicional de $${EXTRA_COST_PER_PERSON} MXN por persona.`,
+      swim: 'Por favor menciona en tu mensaje cuántas personas no saben nadar, por seguridad a bordo.',
+      celebration: 'Por favor menciona en tu mensaje qué están celebrando, para preparar algo especial.',
+    },
+    submit: 'Enviar Mensaje', sending: 'Enviando...',
+    footnote: 'Sin compromiso. Te respondemos en menos de 24 horas.',
+    successTitle: '¡Mensaje enviado!', successMsg: 'Gracias, te contactaremos pronto para confirmar tu reserva.', successBtn: 'Enviar otro mensaje',
+    errorMsg: 'No pudimos enviar tu mensaje. Intenta de nuevo o escríbenos directo por WhatsApp.',
+  },
+  en: {
+    label: 'Contact', title: 'Book your experience', sub: 'Fill out the form and we will reply within 24 hours.',
+    infoTitle: 'Information',
+    details: [
+      { icon: '📍', l: 'Address', v: 'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo' },
+      { icon: '📞', l: 'Phone', v: '+52 984 233 0557' },
+      { icon: '✉️', l: 'Email', v: 'inspirationcatamaran42@gmail.com' },
+    ],
+    qrTitle: 'Follow us',
+    qrItems: [
+      { icon: '📷', label: 'Instagram', sub: '@inspirationcatamaran', url: 'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4' },
+      { icon: '📱', label: 'TikTok', sub: '@inspiration.catam', url: 'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS' },
+      { icon: '💬', label: 'WhatsApp', sub: '+52 984 233 0557', url: 'https://wa.me/529842330557' },
+      { icon: '📘', label: 'Facebook', sub: 'Inspiration Catamaran', url: 'https://www.facebook.com/InspirationCatamaran' },
+    ],
+    formTitle: 'Send us a message',
+    fields: {
+      name: 'Name', email: 'Email', phone: 'Phone', service: 'Service', msg: 'Message',
+      people: 'Number of people',
+      allergies: 'Any allergies?', allergyDetail: 'What are they allergic to?',
+      swim: 'Can everyone swim?', nonSwimmers: 'How many people cannot swim?',
+      celebration: 'Celebrating something special?',
+    },
+    placeholders: {
+      name: 'Your name', email: 'you@email.com', phone: '+52 984 ...', msg: 'Tell us about your ideal trip...',
+      allergyDetail: 'E.g. shellfish, nuts, lactose...',
+    },
+    services: ['Private Tour', 'Sport Fishing', 'Live Aboard & Safari', 'Event ', 'Other'],
+    yesNo: { yes: 'Yes', no: 'No' },
+    swimOptions: { all: 'Yes, everyone can swim', notAll: 'No, not everyone can swim' },
+    warnings: {
+      extraCost: `Groups larger than ${EXTRA_COST_THRESHOLD} people have an extra cost of $${EXTRA_COST_PER_PERSON_USD} USD per person.`,
+      swim: 'Please mention in your message how many people cannot swim, for safety on board.',
+      celebration: 'Please mention in your message what you are celebrating, so we can prepare something special.',
+    },
+    submit: 'Send Message', sending: 'Sending...',
+    footnote: 'No commitment. We reply within 24 hours.',
+    successTitle: 'Message sent!', successMsg: 'Thank you, we will contact you soon to confirm your booking.', successBtn: 'Send another message',
+    errorMsg: 'We could not send your message. Please try again or reach us directly on WhatsApp.',
+  },
+  fr: {
+    label: 'Contact', title: 'Réservez votre expérience', sub: 'Remplissez le formulaire et nous vous répondrons dans les 24 heures.',
+    infoTitle: 'Informations',
+    details: [
+      { icon: '📍', l: 'Adresse', v: 'BlueBay Grand Esmaeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo, Mexique' },
+      { icon: '📞', l: 'Téléphone', v: '+52 984 233 0557' },
+      { icon: '✉️', l: 'Email', v: 'inspirationcatamaran42@gmail.com' },
+    ],
+    qrTitle: 'Suivez-nous',
+    qrItems: [
+      { icon: '📷', label: 'Instagram', sub: '@inspirationcatamaran', url: 'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4' },
+      { icon: '📱', label: 'TikTok', sub: '@inspiration.catam', url: 'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS' },
+      { icon: '💬', label: 'WhatsApp', sub: '+52 984 233 0557', url: 'https://wa.me/529842330557' },
+      { icon: '📘', label: 'Facebook', sub: 'Inspiration Catamaran', url: 'https://www.facebook.com/InspirationCatamaran' },
+    ],
+    formTitle: 'Envoyez-nous un message',
+    fields: {
+      name: 'Nom', email: 'Email', phone: 'Téléphone', service: 'Service', msg: 'Message',
+      people: 'Nombre de personnes',
+      allergies: 'Avez-vous des allergies ?', allergyDetail: 'À quoi êtes-vous allergique ?',
+      swim: 'Tout le monde sait-il nager ?', nonSwimmers: 'Combien de personnes ne savent pas nager ?',
+      celebration: 'Fêtez-vous quelque chose de spécial ?',
+    },
+    placeholders: {
+      name: 'Votre nom', email: 'vous@email.com', phone: '+33 1 ...', msg: 'Parlez-nous de votre voyage idéal...',
+      allergyDetail: 'Ex. fruits de mer, noix, lactose...',
+    },
+    services: ['Tour Privé', 'Pêche Sportive', 'Live Aboard & Safari', 'Événement', 'Autre'],
+    yesNo: { yes: 'Oui', no: 'Non' },
+    swimOptions: { all: 'Oui, tout le monde sait nager', notAll: 'Non, tout le monde ne sait pas nager' },
+    warnings: {
+      extraCost: `Les groupes de plus de ${EXTRA_COST_THRESHOLD} personnes ont un coût supplémentaire de ${EXTRA_COST_PER_PERSON_USD} USD par personne.`,
+      swim: 'Merci de préciser dans votre message combien de personnes ne savent pas nager, pour la sécurité à bord.',
+      celebration: 'Merci de préciser dans votre message ce que vous célébrez, afin de préparer quelque chose de spécial.',
+    },
+    submit: 'Envoyer le message', sending: 'Envoi en cours...',
+    footnote: 'Sans engagement. Nous répondons sous 24h.',
+    successTitle: 'Message envoyé !', successMsg: 'Merci, nous vous contacterons bientôt pour confirmer votre réservation.', successBtn: 'Envoyer un autre message',
+    errorMsg: 'Nous n\'avons pas pu envoyer votre message. Réessayez ou contactez-nous directement sur WhatsApp.',
+  },
+  de: {
+    label: 'Kontakt', title: 'Buchen Sie Ihr Erlebnis', sub: 'Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden.',
+    infoTitle: 'Informationen',
+    details: [
+      { icon: '📍', l: 'Adresse', v: 'BlueBay Grand Esmeralda Puerto Juarez, Carretera Chetumal Km. 300, 77710 Playa del Carmen, Quintana Roo, Mexiko' },
+      { icon: '📞', l: 'Telefon', v: '+52 984 233 0557' },
+      { icon: '✉️', l: 'E-Mail', v: 'inspirationcatamaran42@gmail.com' },
+    ],
+    qrTitle: 'Folgen Sie uns',
+    qrItems: [
+      { icon: '📷', label: 'Instagram', sub: '@inspirationcatamaran', url: 'https://www.instagram.com/inspirationcatamaran?igsi=aHF4ZDhtOXR0NTg4' },
+      { icon: '📱', label: 'TikTok', sub: '@inspiration.catam', url: 'https://www.tiktok.com/@inspiration.catam?_r=1&_t=ZS-99NgJgM8JwS' },
+      { icon: '💬', label: 'WhatsApp', sub: '+52 984 233 0557', url: 'https://wa.me/529842330557' },
+      { icon: '📘', label: 'Facebook', sub: 'Inspiration Catamaran', url: 'https://www.facebook.com/InspirationCatamaran' },
+    ],
+    formTitle: 'Senden Sie uns eine Nachricht',
+    fields: {
+      name: 'Name', email: 'E-Mail', phone: 'Telefon', service: 'Service', msg: 'Nachricht',
+      people: 'Anzahl der Personen',
+      allergies: 'Haben Sie Allergien?', allergyDetail: 'Wogegen sind Sie allergisch?',
+      swim: 'Können alle schwimmen?', nonSwimmers: 'Wie viele Personen können nicht schwimmen?',
+      celebration: 'Feiern Sie etwas Besonderes?',
+    },
+    placeholders: {
+      name: 'Ihr Name', email: 'Sie@email.com', phone: '+49 30 ...', msg: 'Erzählen Sie uns von Ihrer idealen Reise...',
+      allergyDetail: 'Z.B. Meeresfrüchte, Nüsse, Laktose...',
+    },
+    services: ['Privatreise', 'Sportfischen', 'Live Aboard & Safari', 'Veranstaltung', 'Andere'],
+    yesNo: { yes: 'Ja', no: 'Nein' },
+    swimOptions: { all: 'Ja, alle können schwimmen', notAll: 'Nein, nicht alle können schwimmen' },
+    warnings: {
+      extraCost: `Gruppen mit mehr als ${EXTRA_COST_THRESHOLD} Personen haben Mehrkosten von ${EXTRA_COST_PER_PERSON_USD} USD pro Person.`,
+      swim: 'Bitte geben Sie in Ihrer Nachricht an, wie viele Personen nicht schwimmen können, aus Sicherheitsgründen an Bord.',
+      celebration: 'Bitte geben Sie in Ihrer Nachricht an, was Sie feiern, damit wir etwas Besonderes vorbereiten können.',
+    },
+    submit: 'Nachricht senden', sending: 'Wird gesendet...',
+    footnote: 'Unverbindlich. Wir antworten innerhalb von 24 Stunden.',
+    successTitle: 'Nachricht gesendet!', successMsg: 'Danke, wir werden uns bald bei Ihnen melden.', successBtn: 'Weitere Nachricht senden',
+    errorMsg: 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns dirzekt per WhatsApp.',
+  },
+};
+
+const initialForm = {
+  name: '', email: '', phone: '', service: '', msg: '',
+  people: '',
+  allergies: '', allergyDetail: '',
+  swim: '', nonSwimmers: '',
+  celebration: '',
 };
 
 export default function Contact() {
   const { lang } = useContext(LangContext);
   const c = copy[lang] || copy.es;
-  const [form, setForm] = useState({ name:'', email:'', phone:'', service:'', msg:'' });
-  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
-  const handleChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }));
-  const handleSubmit = e => { e.preventDefault(); setSent(true); };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((p) => {
+      const next = { ...p, [name]: value };
+      if (name === 'allergies' && value !== 'yes') next.allergyDetail = '';
+      if (name === 'swim' && value !== 'notAll') next.nonSwimmers = '';
+      return next;
+    });
+  };
+
+  const peopleNum = parseInt(form.people, 10) || 0;
+  const showExtraCostWarning = peopleNum > EXTRA_COST_THRESHOLD;
+  const showAllergyDetail = form.allergies === 'yes';
+  const showNonSwimmers = form.swim === 'notAll';
+  const showCelebrationWarning = form.celebration === 'yes';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const summaryLines = [
+      `${c.fields.name}: ${form.name}`,
+      `${c.fields.email}: ${form.email}`,
+      `${c.fields.phone}: ${form.phone || '—'}`,
+      `${c.fields.service}: ${form.service}`,
+      `${c.fields.people}: ${form.people}`,
+      `${c.fields.allergies}: ${form.allergies === 'yes' ? c.yesNo.yes : c.yesNo.no}${form.allergies === 'yes' ? ` — ${form.allergyDetail}` : ''}`,
+      `${c.fields.swim}: ${form.swim === 'notAll' ? c.swimOptions.notAll : c.swimOptions.all}${form.swim === 'notAll' ? ` — ${form.nonSwimmers}` : ''}`,
+      `${c.fields.celebration}: ${form.celebration === 'yes' ? c.yesNo.yes : c.yesNo.no}`,
+      '',
+      `${c.fields.msg}:`,
+      form.msg || '—',
+    ];
+
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `Nueva reserva — ${form.name || 'Sin nombre'} (${form.service || 'Sin servicio'})`,
+      from_name: form.name,
+      email: form.email,
+      Telefono: form.phone,
+      Servicio: form.service,
+      Personas: form.people,
+      Alergias: form.allergies === 'yes' ? `Sí — ${form.allergyDetail}` : 'No',
+      'Todos saben nadar': form.swim === 'notAll' ? `No — ${form.nonSwimmers} no saben nadar` : 'Sí',
+      'Celebración especial': form.celebration === 'yes' ? 'Sí' : 'No',
+      message: summaryLines.join('\n'),
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || 'Request failed');
+      setStatus('sent');
+    } catch (err) {
+      setStatus('error');
+    }
+  };
+
+  const resetForm = () => {
+    setForm(initialForm);
+    setStatus('idle');
+  };
 
   return (
     <section id="contact" className="contact-section">
@@ -48,7 +285,7 @@ export default function Contact() {
         <div className="contact-header reveal">
           <span className="section-label">{c.label}</span>
           <h2 className="section-title">{c.title}</h2>
-          <div className="wave-div" style={{margin:'1rem auto'}} />
+          <div className="wave-div" style={{ margin: '1rem auto' }} />
           <p className="section-sub">{c.sub}</p>
         </div>
         <div className="contact-body">
@@ -88,7 +325,7 @@ export default function Contact() {
 
           {/* Right: form */}
           <div className="contact-form-card reveal reveal-delay-2">
-            {!sent ? (
+            {status !== 'sent' ? (
               <>
                 <div className="form-card-title">{c.formTitle}</div>
                 <form onSubmit={handleSubmit}>
@@ -109,15 +346,109 @@ export default function Contact() {
                       <label>{c.fields.service}</label>
                       <select name="service" value={form.service} onChange={handleChange} required>
                         <option value="">—</option>
-                        {c.services.map(s => <option key={s} value={s}>{s}</option>)}
+                        {c.services.map((s) => <option key={s} value={s}>{s}</option>)}
                       </select>
                     </div>
+
+                    {/* Number of people */}
+                    <div className="form-field">
+                      <label>{c.fields.people}</label>
+                      <input
+                        name="people"
+                        type="number"
+                        min="1"
+                        max={MAX_PEOPLE}
+                        placeholder={`1-${MAX_PEOPLE}`}
+                        value={form.people}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+
+                    {/* Allergies */}
+                    <div className="form-field">
+                      <label>{c.fields.allergies}</label>
+                      <select name="allergies" value={form.allergies} onChange={handleChange} required>
+                        <option value="">—</option>
+                        <option value="no">{c.yesNo.no}</option>
+                        <option value="yes">{c.yesNo.yes}</option>
+                      </select>
+                    </div>
+                    {showAllergyDetail && (
+                      <div className="form-field form-field--full">
+                        <label>{c.fields.allergyDetail}</label>
+                        <input
+                          name="allergyDetail"
+                          type="text"
+                          placeholder={c.placeholders.allergyDetail}
+                          value={form.allergyDetail}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    )}
+
+                    {showExtraCostWarning && (
+                      <div className="form-field form-field--full">
+                        <div className="form-warning">⚠️ {c.warnings.extraCost}</div>
+                      </div>
+                    )}
+
+                    {/* Swimming */}
+                    <div className="form-field">
+                      <label>{c.fields.swim}</label>
+                      <select name="swim" value={form.swim} onChange={handleChange} required>
+                        <option value="">—</option>
+                        <option value="all">{c.swimOptions.all}</option>
+                        <option value="notAll">{c.swimOptions.notAll}</option>
+                      </select>
+                    </div>
+                    {showNonSwimmers && (
+                      <div className="form-field">
+                        <label>{c.fields.nonSwimmers}</label>
+                        <input
+                          name="nonSwimmers"
+                          type="number"
+                          min="1"
+                          max={MAX_PEOPLE}
+                          value={form.nonSwimmers}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    )}
+                    {showNonSwimmers && (
+                      <div className="form-field form-field--full">
+                        <div className="form-warning">⚠️ {c.warnings.swim}</div>
+                      </div>
+                    )}
+
+                    {/* Celebration */}
+                    <div className="form-field">
+                      <label>{c.fields.celebration}</label>
+                      <select name="celebration" value={form.celebration} onChange={handleChange} required>
+                        <option value="">—</option>
+                        <option value="no">{c.yesNo.no}</option>
+                        <option value="yes">{c.yesNo.yes}</option>
+                      </select>
+                    </div>
+                    {showCelebrationWarning && (
+                      <div className="form-field form-field--full">
+                        <div className="form-warning">🎉 {c.warnings.celebration}</div>
+                      </div>
+                    )}
+
                     <div className="form-field form-field--full">
                       <label>{c.fields.msg}</label>
                       <textarea name="msg" placeholder={c.placeholders.msg} value={form.msg} onChange={handleChange} />
                     </div>
                   </div>
-                  <button type="submit" className="form-submit-btn">✈ {c.submit}</button>
+
+                  {status === 'error' && <p className="form-error">{c.errorMsg}</p>}
+
+                  <button type="submit" className="form-submit-btn" disabled={status === 'sending'}>
+                    {status === 'sending' ? c.sending : c.submit}
+                  </button>
                   <p className="form-footnote">{c.footnote}</p>
                 </form>
               </>
@@ -126,7 +457,7 @@ export default function Contact() {
                 <span className="form-success-icon">⛵</span>
                 <h3>{c.successTitle}</h3>
                 <p>{c.successMsg}</p>
-                <button className="btn-primary" onClick={() => setSent(false)}>{c.successBtn}</button>
+                <button className="btn-primary" onClick={resetForm}>{c.successBtn}</button>
               </div>
             )}
           </div>

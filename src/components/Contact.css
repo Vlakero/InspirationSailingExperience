@@ -59,7 +59,30 @@
 .form-field textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 .form-submit-btn { display: flex; align-items: center; justify-content: center; gap: 0.6rem; width: 100%; padding: 0.9rem; background: var(--teal); color: white; border: none; border-radius: 8px; font-family: var(--font-b); font-size: 0.88rem; font-weight: 500; cursor: pointer; transition: all 0.3s; margin-top: 0.5rem; }
 .form-submit-btn:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(42,159,216,0.35); }
+.form-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
 .form-footnote { text-align: center; font-size: 0.72rem; color: var(--text-light); font-style: italic; margin-top: 0.65rem; }
+.form-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: #fff8e6;
+  border: 1px solid #f0d999;
+  color: #8a6d1a;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+}
+.form-error {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #c0392b;
+  background: #fdecea;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.75rem 0 0;
+}
 /* Success */
 .form-success { text-align: center; padding: 3rem 1rem; }
 .form-success-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }

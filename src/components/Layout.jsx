@@ -12,16 +12,16 @@ const LANGS = [
 /* ── Per-language navbar copy ──────────────────── */
 const NAV_COPY = {
   es: { links:['Inicio','Experiencias','Precios','Contacto'], book:'Reservar',
-        tagline:'Catamarán de 40 pies · Playa del Carmen, Quintana Roo, México',
+        tagline:'Catamarán de 42 pies · Playa del Carmen, Quintana Roo, México',
         copy:'© 2026 Inspiration. Todos los derechos reservados.' },
   en: { links:['Home','Experiences','Pricing','Contact'],      book:'Reserve',
-        tagline:'40ft Catamaran · Playa del Carmen, Quintana Roo, Mexico',
+        tagline:'42ft Catamaran · Playa del Carmen, Quintana Roo, Mexico',
         copy:'© 2026 Inspiration. All rights reserved.' },
   fr: { links:['Accueil','Expériences','Tarifs','Contact'],    book:'Réserver',
-        tagline:'Catamaran 40 pieds · Playa del Carmen, Quintana Roo, Mexique',
+        tagline:'Catamaran 42 pieds · Playa del Carmen, Quintana Roo, Mexique',
         copy:'© 2026 Inspiration. Tous droits réservés.' },
   de: { links:['Start','Erlebnisse','Preise','Kontakt'],     book:'Buchen',
-        tagline:'40 Fuß Katamaran · Playa del Carmen, Quintana Roo, Mexiko',
+        tagline:'42 Fuß Katamaran · Playa del Carmen, Quintana Roo, Mexiko',
         copy:'© 2026 Inspiration. Alle Rechte vorbehalten.' },
 };
 

@@ -11,6 +11,7 @@ import Private from './components/Private';
 import Fishing from './components/Fishing';
 import Sailing from './components/Sailing';
 import Showcase from './components/Showcase';
+import Blog from './components/Blog';
 import './styles.css';
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
       <Showcase />
       <Hero />
       <About />
+      <Blog />
       <Experiences />
       <Private />
       <Sailing />
